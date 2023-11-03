@@ -6,7 +6,7 @@ In this task we are going to put even numbers at top of odd number.
 
 **How do we do that?**
 
-<<<<<<< HEAD
+
 1- Check if the number is even or odd.
 
 2- If even we push it into p2 else we push it into p3 (those are 2 stacks).
@@ -14,7 +14,7 @@ In this task we are going to put even numbers at top of odd number.
 3- push p2 into p3.
 
 4- display p3.
-=======
+
 1- Check if the number is even or odd
 
 2- If even we push it into p2 else we push it into p3 (those are 2 stacks)
