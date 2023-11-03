@@ -16,7 +16,8 @@ bool compare(stack *h1, stack *h2)
             return (false);
         tmp1 = h1->next;
         tmp2 = h2->next;
-        pop(h1, h2);
+        pop(h1);
+        pop(h2);
         h1 = tmp1;
         h2 = tmp2;
     }
