@@ -13,6 +13,6 @@ struct stack
     struct stack *next;
 };
 void push(stack **, int);
-void pop(stack *, stack *);
+void pop(stack *);
 bool compare(stack *, stack *);
 #endif
