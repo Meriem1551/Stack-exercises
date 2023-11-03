@@ -9,11 +9,11 @@ int main(void)
     unsigned int count, num;
     stack *s = NULL;
 
-    printf("How many numbers do you have?");
+    printf("How many numbers do you have? ");
     scanf("%u", &num);
     for (count = 0; count < num; count++)
     {
-        printf("Enter number of pos %u", count);
+        printf("Enter number of pos: %u", count);
         scanf("%d", &data);
         push(&s, data);
     }
