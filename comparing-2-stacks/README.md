@@ -13,9 +13,11 @@ using in thi task.
 
 **main.c**: Contains main function where we check our code.
 
-**pop.c**: Contains function that delete nodes from a stack.
+**pop.c**: Contains function that deletes nodes from a stack.
 
-**push.c**: Contains function that add nodes from a stack.
+**push.c**: Contains function that adds nodes from a stack.
+
+**compare.c**: contains function that compare two stacks and return 1 if they are, otherwise 0
 
 <h2>Explanation:</h2>
 
