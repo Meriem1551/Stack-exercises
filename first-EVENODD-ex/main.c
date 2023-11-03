@@ -13,7 +13,7 @@ int main(void)
     scanf("%u", &num);
     for (count = 0; count < num; count++)
     {
-        printf("Enter number of pos: %u", count);
+        printf("Enter number of pos%u: ", count);
         scanf("%d", &data);
         push(&s, data);
     }

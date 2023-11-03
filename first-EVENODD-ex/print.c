@@ -12,7 +12,7 @@ void print(stack *h)
     ptr = h;
     while (ptr != NULL)
     {
-        printf("%d", ptr->num);
+        printf("%d|", ptr->num);
         ptr = ptr->next;
     }
 }
