@@ -21,7 +21,3 @@ copy p3 to p2.
 **recoverOrigin.c**: contains functions which recover the original stack.
 
 **recoverEven.c**: contains functions which recover stack that contains even nums.
-
-<h4>Author:</h4>
-
-Meriem Boussaid.
