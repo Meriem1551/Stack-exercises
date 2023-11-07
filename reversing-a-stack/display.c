@@ -9,10 +9,11 @@ void display(Floats *p)
     Floats *ptr;
     if (p == NULL)
         return;
-    ptr = p;
-    while (ptr != NULL)
+    while (p != NULL)
     {
+        ptr = p->next;
         printf("%.2f\n", ptr->num);
-        ptr = ptr->next;
+        pop(p);
+        p = ptr;
     }
 }
