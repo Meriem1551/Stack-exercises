@@ -9,10 +9,11 @@ void print(stack *h)
     stack *tmp;
     if (h == NULL)
         return;
+
     while (h != NULL)
     {
-        printf("%d | ", h->num);
         tmp = h->next;
+        printf("%d | ", h->num);
         pop(h);
         h = tmp;
     }

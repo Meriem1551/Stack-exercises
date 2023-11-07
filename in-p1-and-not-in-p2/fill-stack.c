@@ -16,27 +16,20 @@ void fill_stack(stack *h1, stack *h2, positif n, positif m)
     // NUMBER IS IN T1 AND NOT IN T2
     for (i = 0; i < n; i++)
     {
-        for (j = 0; j < m; j++)
+        if (!isExiste(t1[i], t2, m))
         {
-            if (!isExiste(t1[i], t2, m))
-            {
-                push(&h3, t1[i]);
-                count++;
-            }
+            push(&h3, t1[i]);
+            count++;
         }
     }
     // NUMBER IS IN T2 AND NOT IN T1
     for (i = 0; i < m; i++)
     {
-        for (j = 0; j < n; j++)
+        if (!isExiste(t2[i], t1, n))
         {
-            if (!isExiste(t2[i], t1, n))
-            {
-                push(&h3, t2[i]);
-                count++;
-            }
+            push(&h3, t2[i]);
+            count++;
         }
     }
-
     sort_stack(h3, count);
 }
