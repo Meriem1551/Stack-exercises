@@ -2,32 +2,19 @@
 /**
  * sort_stack - sort a given stack
  * @h: pointer to a stack
- * @i: unsigned int
+ * @numN: unsigned int
  * Return: void
  */
-void sort_stack(stack *h, positif i)
+void sort_stack(stack *h, positif numN)
 {
-    int
-        *t,
-        n;
+
+    int n;
     positif
         j = 0,
         pos;
-    stack *tmp;
-
-    t = (int *)malloc(sizeof(int) * i);
-    if (t == NULL)
-        return;
-    while (h != NULL)
-    {
-        tmp = h->next;
-        t[j] = h->num;
-        pop(h);
-        h = tmp;
-        j++;
-    }
+    int *t = create_array(h, numN);
     // insertion sort
-    for (j = 1; j < i; j++)
+    for (j = 1; j < numN; j++)
     {
         n = t[j];
         pos = j;
@@ -39,7 +26,7 @@ void sort_stack(stack *h, positif i)
         t[pos] = n;
     }
     h = NULL;
-    for (j = 0; j < i; j++)
+    for (j = 0; j < numN; j++)
     {
         push(&h, t[j]);
     }

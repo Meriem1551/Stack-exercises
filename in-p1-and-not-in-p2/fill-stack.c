@@ -6,56 +6,37 @@
  * @p2: pointer to a stack
  * Return: void
  */
-void fill_stack(stack *h1, stack *h2)
+void fill_stack(stack *h1, stack *h2, positif n, positif m)
 {
-    stack
-        *tmp,
-        *h4,
-        *h3 = NULL;
-    positif count = 0;
-    if (h1 == NULL || h2 == NULL)
-        return;
-    // items existe in h1 and not in h2
-    while (h1 != NULL)
+    int *t1 = create_array(h1, n); // array for h1
+    int *t2 = create_array(h2, m); // array for h2
+    positif i, j, count = 0;
+    stack *h3 = NULL;
+
+    // NUMBER IS IN T1 AND NOT IN T2
+    for (i = 0; i < n; i++)
     {
-        while (h2 != NULL)
+        for (j = 0; j < m; j++)
         {
-            tmp = h1->next;
-            if (!isExiste(h1->num, h2))
+            if (!isExiste(t1[i], t2, m))
             {
-                push(&h3, h1->num);
-                push(&h4, h1->num); // contains h1's items
-                pop(h1);
-                h1 = tmp;
+                push(&h3, t1[i]);
                 count++;
-            }
-            else
-            {
-                push(&h4, h1->num);
-                pop(h1);
-                h1 = tmp;
             }
         }
     }
-    // items existe in h2 and not in h1
-    while (h2 != NULL)
+    // NUMBER IS IN T2 AND NOT IN T1
+    for (i = 0; i < m; i++)
     {
-        while (h4 != NULL)
+        for (j = 0; j < n; j++)
         {
-            tmp = h2->next;
-            if (!isExiste(h2->num, h4))
+            if (!isExiste(t2[i], t1, n))
             {
-                push(&h3, h2->num);
-                pop(h2);
-                h2 = tmp;
+                push(&h3, t2[i]);
                 count++;
-            }
-            else
-            {
-                pop(h2);
-                h2 = tmp;
             }
         }
     }
+
     sort_stack(h3, count);
 }

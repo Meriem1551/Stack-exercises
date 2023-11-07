@@ -1,20 +1,17 @@
 #include "main.h"
 /**
  * isExiste - checs if a value existe in a given stack
- * @f: pointer to the first stack
+ * @s: pointer to array of integers
  * @n: integer
+ * @num: integer
  * Return: true if it existe, false otherwise
  */
-bool isExiste(int n, stack *s)
+bool isExiste(int n, int s[], positif num)
 {
-    stack *tmp;
-    while (s != NULL)
+    for (int i = 0; i < num; i++)
     {
-        tmp = s->next;
-        if (s->num == n)
-            return false;
-        pop(s);
-        s = tmp;
+        if (s[i] == n)
+            return (true);
     }
-    return true;
+    return (false);
 }
