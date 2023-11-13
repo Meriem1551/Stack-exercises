@@ -8,7 +8,5 @@ void pop(Floats *p)
 {
     if (p == NULL)
         return;
-    Floats *ptr = p;
-    p = ptr->next;
-    free(ptr);
+    free(p);
 }
